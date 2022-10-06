@@ -8,4 +8,4 @@ python-dotenv
 Werkzeug
 pandas
 numpy
-opencv-python-headless
+opencv-python
