@@ -1,0 +1,11 @@
+click
+Flask
+gunicorn
+itsdangerous
+Jinja2==2.11.2
+MarkupSafe
+python-dotenv
+Werkzeug
+pandas
+numpy
+opencv-python-headless
