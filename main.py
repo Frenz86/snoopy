@@ -57,20 +57,24 @@ def capture_by_frames():
         yield (b'--frame\r\n'
                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
 
+# Default Index
 @app.route('/')
 def index():
     return render_template('index.html')
 
+# POST start request
 @app.route('/start',methods=['POST'])
 def start():
     return render_template('index.html')
 
+# POST stop request
 @app.route('/stop',methods=['POST'])
 def stop():
     if camera.isOpened():
         camera.release()
     return render_template('stop.html')
 
+# Video Capture
 @app.route('/video_capture')
 def video_capture():
     return Response(capture_by_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
